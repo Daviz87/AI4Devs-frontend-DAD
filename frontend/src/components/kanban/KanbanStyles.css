@@ -1,0 +1,94 @@
+/* Estilos generales del tablero Kanban */
+.kanban-board {
+  width: 100%;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.kanban-container {
+  min-height: calc(100vh - 150px);
+}
+
+/* Columnas */
+.kanban-column {
+  flex: 0 0 300px;
+  min-width: 300px;
+  max-width: 300px;
+  margin-right: 1rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.column-header {
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.column-header .card-title {
+  font-weight: bold;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+}
+
+.candidates-container {
+  min-height: 200px;
+}
+
+/* Tarjetas de candidatos */
+.candidate-card {
+  cursor: grab;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+}
+
+.candidate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-card:active {
+  cursor: grabbing;
+}
+
+.score-container {
+  margin-top: 8px;
+}
+
+.star {
+  color: #d1d1d1;
+  font-size: 1.2rem;
+  margin-right: 2px;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+/* Header de la página */
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.back-button {
+  color: #212529;
+  margin-right: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .kanban-container {
+    flex-direction: column;
+  }
+  
+  .kanban-column {
+    flex: none;
+    min-width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+} 

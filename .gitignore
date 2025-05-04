@@ -1,11 +1,14 @@
 # Ignore in all directories
 **/.DS_Store
-#**/.env
-**/.env.example
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
 **/node_modules
 **/prompts_master.md
 
-# other dependencies
+# dependencies
 **/.pnp
 **.pnp.js
 
@@ -24,5 +27,16 @@ yarn-error.log*
 # IDE
 .idea
 .vscode
+**/.cursor
+**/.cursor/
+.cursor/
+/.cursor
+.cursor/rules/
+
+# Misc
+.DS_Store
 
 # .env
+.cursor/rules/backend-senior-developer.mdc
+.cursor/rules/frontend-senior-developer.mdc
+.cursor/rules/prompt-rules.mdc
